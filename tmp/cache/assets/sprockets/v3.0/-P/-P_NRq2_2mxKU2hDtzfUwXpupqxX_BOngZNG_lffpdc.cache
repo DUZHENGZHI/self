@@ -1,0 +1,18 @@
+I"¥(function() {
+  $(document).on('turbolinks:load', function() {
+    var opt;
+    $('a#select_photo').click(function() {
+      return $('input[type=file]').show().focus().click().hide();
+    });
+    opt = {
+      type: 'POST',
+      url: "/photos",
+      success: function(data, status, xhr) {
+        return $("#img-input").val(data);
+      }
+    };
+    return $('input[type=file]').fileUpload(opt);
+  });
+
+}).call(this);
+:ET

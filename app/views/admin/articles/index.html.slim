@@ -1,0 +1,20 @@
+.row
+  .col-sm-12
+    h3 博客管理
+    hr
+    table.table
+      thead
+        tr
+          th 文章名
+          th 发表时间
+          th 操作
+      tbody
+        -@articles.each do |article|
+          tr
+            td = link_to article.title, blog_path(article.id)
+            td = format_datetime article.created_at
+            td
+              = link_to '编辑', edit_admin_article_path(article), class: 'edit-article-link'
+              = link_to '删除', admin_article_path(article.id), method: :delete, data: {confirm: "确认删除?"}
+
+

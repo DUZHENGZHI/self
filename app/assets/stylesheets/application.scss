@@ -1,0 +1,38 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "markdown";
+@import "blog";
+@import "comment";
+@import "admin/*";
+
+body.view {
+  font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif;
+  font-size: 18px;
+}
+
+.title a {
+  display: block;
+}
+
+.title {
+  cursor: pointer;
+}
+
+li.title:hover {
+  background-color: #fcf8e3;
+}
+
+.panel {
+  border-radius: 0;
+}
+
+.panel-default > .panel-heading {
+  background-image: none;
+  background-color: #fff;
+}
+
+.navbar-default {
+  background-image: none;
+  background-color: #fff;
+  box-shadow: none;
+}
